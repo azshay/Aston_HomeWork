@@ -1,2 +1,2 @@
-public class Mammal extends Animal implements HasSpine{
+public abstract class Mammal extends Animal implements HasSpine{
 }

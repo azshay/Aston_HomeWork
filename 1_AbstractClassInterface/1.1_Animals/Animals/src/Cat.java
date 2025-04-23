@@ -1,2 +1,2 @@
-public class Cat extends Mammal implements HasWool{
+public abstract class Cat extends Mammal implements HasWool{
 }

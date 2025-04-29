@@ -1,25 +1,29 @@
 public class Book {
     private String name;
-    private String author;
+    private int year;
+    private int numberOfPages;
 
-    public Book(String name, String author) {
+    public Book(String name, int year, int numberOfPages) {
         this.name = name;
-        this.author = author;
+        this.year = year;
+        this.numberOfPages = numberOfPages;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getYear() {
+        return year;
+    }
+
+    public int getNumberOfPages() {
+        return numberOfPages;
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return "[Название книги: " + name + ", год выпуска: "
+                + year + ", количество страниц: " + numberOfPages + "]";
     }
 }

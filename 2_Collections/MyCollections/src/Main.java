@@ -1,15 +1,14 @@
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class Main {
-    static MyArrayList<Integer> myArrayList = new MyArrayList<>();
-    static ArrayList<Integer> test = new ArrayList<>();
+    static MyArrayList<String> languages = new MyArrayList<>();
+    static MyHashSet<String> myHashSet = new MyHashSet<>();
 
     public static void main(String[] args) {
         // Тесты для собственного аналога ArrayList
 
-        MyArrayList<String> languages = new MyArrayList<>();
         System.out.println("Создан новый список: " + languages);
         System.out.println("Пустой ли список? " + languages.isEmpty());
 
@@ -35,5 +34,33 @@ public class Main {
         System.out.println("\nСписок чисел: " + numbers);
 
         // Тесты для собственного аналога HashSet
+
+        System.out.println("\nТесты для HashSet:\n");
+
+        System.out.println("Добавление элементов:");
+        System.out.println("add('Java'): " + myHashSet.add("Java"));
+        System.out.println("add('Python'): " + myHashSet.add("Python"));
+        System.out.println("add('Java'): " + myHashSet.add("Java"));
+        System.out.println("Set: " + myHashSet);
+
+        System.out.println("\nПроверка содержимого:");
+        System.out.println("contains('Python'): " + myHashSet.contains("Python"));
+        System.out.println("size(): " + myHashSet.size());
+        System.out.println("contains('C++'): " + myHashSet.contains("C++"));
+        System.out.println("size(): " + myHashSet.size());
+
+        System.out.println("\nУдаление элементов:");
+        System.out.println("remove('Python'): " + myHashSet.remove("Python"));
+        System.out.println("size(): " + myHashSet.size());
+        System.out.println("remove('C++'): " + myHashSet.remove("C++"));
+        System.out.println("Set: " + myHashSet);
+        System.out.println("size(): " + myHashSet.size());
+
+        System.out.println("\nДобавление нескольких элементов:");
+        myHashSet.add("JavaScript");
+        myHashSet.add("Kotlin");
+        myHashSet.add("Go");
+        System.out.println("Set: " + myHashSet);
+        System.out.println("size(): " + myHashSet.size());
     }
 }

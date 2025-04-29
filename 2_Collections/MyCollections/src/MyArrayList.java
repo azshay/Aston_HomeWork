@@ -1,22 +1,13 @@
-import java.util.Arrays;
 import java.util.Collection;
 
 public class MyArrayList<T> {
     private Object[] elements;
-    int size;
+    private int size;
 
     public MyArrayList() {
         elements = new Object[10];
         size = 0;
     }
-
-    //REMOVE AFTER TEST
-    public void getAllList() {
-        for (Object element : elements) {
-            System.out.println(element);
-        }
-    }
-    //REMOVE AFTER TEST
 
     public boolean addAll(Collection<? extends T> collection) {
         if (collection == null || collection.isEmpty()) {
@@ -129,13 +120,13 @@ public class MyArrayList<T> {
         return false;
     }
 
-    public void resizeArray(int size) {
+    private void resizeArray(int size) {
         Object[] tempArray = new Object[size];
         System.arraycopy(elements, 0, tempArray, 0, elements.length);
         elements = tempArray;
     }
 
-    public void resizeArray() {
+    private void resizeArray() {
         resizeArray((int) (elements.length * 1.5) + 1);
     }
 
